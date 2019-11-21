@@ -5,7 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean id="randomColor" class="java.awt.Color">
+<!--    <bean class="aop_examples.ExceptionHandlerAspect"/>-->
+
+
+    <bean id="yellowColor" class="java.awt.Color">
 
         <constructor-arg index="0" type="int" value="255"/>
         <constructor-arg index="1" type="int" value="255"/>

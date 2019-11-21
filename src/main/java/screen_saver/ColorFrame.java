@@ -12,14 +12,14 @@ import java.util.Random;
 /**
  * @author Evgeny Borisov
  */
-@Component
+
 public class ColorFrame extends JFrame {
 
     @Autowired
     private Random random;
 
     @Autowired
-    private Color color;
+    private Color c;
 
     @PostConstruct
     public void init() {
@@ -30,7 +30,7 @@ public class ColorFrame extends JFrame {
 
     public void moveToRandomLocation() {
         setLocation(random.nextInt(1600), random.nextInt(1200));
-        getContentPane().setBackground(color);
+        getContentPane().setBackground(c);
         repaint();
     }
 
