@@ -5,4 +5,5 @@ package never_use_switch;
  */
 public interface MailGenerator {
     String generateMail(MailInfo mailInfo);
+    int getMyCode();
 }
