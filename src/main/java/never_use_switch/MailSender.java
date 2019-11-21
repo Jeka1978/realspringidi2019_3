@@ -3,11 +3,7 @@ package never_use_switch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Map;
-
-import static java.util.function.Function.identity;
-import static java.util.stream.Collectors.toMap;
 
 /**
  * @author Evgeny Borisov
@@ -16,13 +12,9 @@ import static java.util.stream.Collectors.toMap;
 public class MailSender {
 
 
+    @Autowired
     private Map<Integer, MailGenerator> map;
 
-
-    @Autowired
-    public MailSender(List<MailGenerator> mailGenerators) {
-        map = mailGenerators.stream().collect(toMap(MailGenerator::getMyCode, identity()));
-    }
 
     public void sendMail(MailInfo mailInfo) {
         int mailCode = mailInfo.getMailCode();
